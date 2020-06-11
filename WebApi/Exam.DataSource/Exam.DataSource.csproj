@@ -46,6 +46,7 @@
     <Compile Include="Common\DbsSqlParams.cs" />
     <Compile Include="Common\DbsConnections.cs" />
     <Compile Include="DbsAuth.cs" />
+    <Compile Include="DbsProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
   </ItemGroup>
