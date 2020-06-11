@@ -85,6 +85,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Common\ApiControllerBase.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -101,8 +103,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Exam.Business\Exam.Business.csproj">
+      <Project>{28826e5f-ce44-40c1-9246-4b8253cf1f8f}</Project>
+      <Name>Exam.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Exam.Entities\Exam.Entities.csproj">
+      <Project>{b693931e-2a54-41cf-b467-6db92f2064db}</Project>
+      <Name>Exam.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
