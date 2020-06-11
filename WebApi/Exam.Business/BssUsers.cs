@@ -26,5 +26,27 @@ namespace Exam.Business
 
         }
 
+        public bool AuthenticatePath(Exam.Entities.User data)
+        {
+            InitalizeMessage();
+
+            AppendMessage(string.IsNullOrEmpty(data.Nombre), "Favor de indicar un usuario");
+
+            AppendMessage(string.IsNullOrEmpty(data.Password), "Favor de indicar un password");
+
+            bool result = false;
+
+            if (IsValid)
+            {
+                result = DbsAuth.GetAuth(data.Nombre,data.Password);
+            }
+            else
+            {
+                throw new ArgumentException(Message.ToString());
+            }
+
+            return result;
+        }
+
     }
 }
